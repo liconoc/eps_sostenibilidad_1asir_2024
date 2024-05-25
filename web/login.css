@@ -1,0 +1,154 @@
+.centrado {
+      margin-left: 30px; /* Elimina el margen predeterminado del cuerpo del documento */
+      margin-right: 30px; /* Esto establece un margen de 20 píxeles en todos los lados del párrafo */
+      margin-top: 5px; /* Margen de 10 píxeles en la parte superior */
+      margin-bottom: 5px; /* Margen de 10 píxeles en la parte inferior */
+      align-items: "center;";
+        }
+
+        header {
+            background-color: #FFD659;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+             margin-right: 5px; /* Ajusta la separación entre elementos */
+             font-size: 20px;
+             font-family: Arial, sans-serif;
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* Elimina el margen derecho del último elemento */
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            padding: 20px 20px;
+             font-family: Copperplate Gothic Light, sans-serif;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+
+        }
+        .logo img {
+            height: 130px; /* Ajusta la altura del logo según sea necesario */
+            width: auto;
+            margin-left: 10%; /* Ajusta este valor según sea necesario */
+            margin-right: auto; /* Ajusta este valor según sea necesario */
+        }
+
+      .logo {
+    font-family: Copperplate Gothic Light, sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: transform 0.3s; /* Agrega una transición de transformación */
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Aplica un efecto de sobresalir al hacer hover */
+}
+
+
+.prueba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    text-align: center;
+}
+.prueba {
+    display: flex;
+    flex-direction: row; /* Cambia a dirección horizontal */
+    justify-content: space-around; /* Ajusta el espacio entre los formularios */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+}
+
+.prueba form {
+    margin: 0 50px; /* Ajusta el margen entre los formularios */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin: 5;
+    text-align: center; /* Centra el texto */
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+}
+
+.logo-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    order: -1; /* Cambia el orden del logo al principio */
+}
+
+.logo {
+    width: 80px; /* Ajusta el tamaño de la imagen según lo necesites */
+}
+
+.logo-text {
+    font-size: 20px;
+     margin-left: 3px; /* Añade un pequeño espacio entre el logo y el texto */
+     color: black;
+}

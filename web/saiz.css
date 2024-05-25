@@ -1,0 +1,217 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+
+}
+
+ .header1 {
+        background-color: #D3E9FF;
+        color: #49B5E7;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .header1 img {
+        display: block;
+        margin: 0 auto;
+    }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.goal {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.goal:hover {
+    transform: scale(1.05);
+}
+
+.goal img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+img {
+
+    border-radius: 10px;
+}
+
+.goal-info {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+}
+
+ .goal {
+        text-align: center; /* Centra el contenido del div */
+        position: relative; /* Establece posición relativa para permitir posicionar el pie de página */
+    }
+
+    .goal img {
+        display: block; /* Asegura que la imagen ocupe todo el ancho disponible */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+
+.centrado {
+      margin-left: 30px; /* Elimina el margen predeterminado del cuerpo del documento */
+      margin-right: 30px; /* Esto establece un margen de 20 píxeles en todos los lados del párrafo */
+      margin-top: 5px; /* Margen de 10 píxeles en la parte superior */
+      margin-bottom: 5px; /* Margen de 10 píxeles en la parte inferior */
+      align-items: "center;";
+        }
+
+        header {
+            background-color: #FFD659;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+             margin-right: 5px; /* Ajusta la separación entre elementos */
+             font-size: 20px;
+             font-family: Arial, sans-serif;
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* Elimina el margen derecho del último elemento */
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 20px;
+             font-family: Copperplate Gothic Light, sans-serif;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+
+        }
+        .logo img {
+            height: 130px; /* Ajusta la altura del logo según sea necesario */
+            width: auto;
+            margin-left: 10%; /* Ajusta este valor según sea necesario */
+            margin-right: auto; /* Ajusta este valor según sea necesario */
+        }
+
+      .logo {
+    font-family: Copperplate Gothic Light, sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: transform 0.3s; /* Agrega una transición de transformación */
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Aplica un efecto de sobresalir al hacer hover */
+}
+
+ 
+nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul li:hover {
+        background-color: #f0f0f0;
+    }
+
+    .titulo {
+        font-family: Broadway, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        color: #545454;
+        animation: fadeIn 2s ease forwards, bounce 2s infinite alternate;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-15px);
+        }
+    }
+
+
+    .juego {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#gameContainer {
+    position: relative;
+    width: 600px; /* Ancho del cuadro del juego */
+    height: 400px; /* Alto del cuadro del juego */
+    background-image: url("img/ciudad.png"); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+}
+
+canvas {
+    display: block;
+    border: 2px solid black;
+}
+
+#resetButton {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
+
+
+
+

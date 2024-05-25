@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;background: #000000;  /* fallback for old browsers */
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+/* Estilos del banners */
+.banner-img2 {
+ align-items : center;
+  position: relative;
+  width: 80%;
+  border: 5px solid #673AB7; /* Borde para el banner vertical */
+  border-radius: 15px; /* Borde redondeado para el banner vertical */
+  overflow: hidden; /* Evita que las imágenes sobresalgan del contenedor */
+  max-height: 45vh; /* Ajusta según necesidades */
+  margin: 130px auto 0; 
+  transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves para el efecto */
+}
+
+.banner-img2:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón sobre ella */
+  box-shadow: 0 0 15px #673AB7; /* Añade un efecto de brillo a los bordes */
+}
+
+  #menu {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFD659, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #E0DEDE; /* Color de letra del menú */
+    padding: 2px;
+    position: fixed; /* Fija el menú en la parte superior de la pantalla */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+    display: flex; /* Aplica un diseño de caja flexible para alinear elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+#menu a {
+    color: #000000;
+    text-decoration: none;
+    margin: 15px; /* Espacio entre elementos del menú */
+    font-size: 17px; /* Cambia el tamaño de la letra a 20 píxeles */
+    padding: 10px 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+    background: #673AB7;  /* fallback for old browsers */
+    transform: scale(1.1);
+    background: -webkit-linear-gradient(to right, #512DA8, #673AB7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #512DA8, #673AB7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFFFFF !important; /* Cambio de color de texto a blanco al pasar el ratón por encima */
+}
+#menu img {
+  width: 275px; /* Tamaño inicial de la imagen */
+  height: 125px; /* Tamaño inicial de la imagen */
+  margin-left: 20px;
+  border-radius: 50px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves para el efecto */
+}
+
+#menu img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón sobre ella */
+  box-shadow: 0 0 10px #673AB7; /* Añade un efecto de brillo a los bordes */
+}
+
+nav {
+  font-family: monospace;
+}
+
+ul {
+  background: #673AB7;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+nav li a {
+  color: #ffffff !important;
+}
+.color{
+  color: #000000 !important;
+}
+li:hover,
+li:focus-within {
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+#search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja el elemento hacia la derecha */
+    margin-right: 20px; /* Espacio entre el buscador y otros elementos */
+}
+
+#search-bar input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px; /* Espacio entre el input y el botón */
+}
+
+#search-bar button {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #267871; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+}
+
+#search-bar button:hover {
+    background-color: #136a8a; /* Cambio de color al pasar el cursor */
+}
+
+#menu a:last-child {
+    margin-right: 15px; /* Espacio entre el carrito y otros elementos */
+}
+
+/* Estilos del mapa */
+#map-container {
+    width: 650px; /* Ajusta el ancho del mapa según tus preferencias */
+    height: 550px; /* Ajusta la altura del mapa según tus preferencias */
+    border: 5px solid #673AB7; /* Establece el borde con el color deseado */
+    border-radius: 8px; /* Agrega esquinas redondeadas al contenedor */
+    margin: 0 auto; /* Centra horizontalmente el elemento */
+}
+.custom-list {
+    text-align: center;
+    }
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina el borde predeterminado del iframe */
+    border-radius: 4px; /* Agrega esquinas redondeadas al iframe */
+}
+
+/* acomodar contenedor*/
+.contenedor {
+    margin-left: 180px;  /* Margen a la izquierda */
+    margin-right: 180px; /* Margen a la derecha */
+    text-align: center; /* Alinea el contenido al centro */
+}
+.contacto-contenedor {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 20px;
+    transition: border-color 0.3s; /* Agrega transición para suavizar el cambio de color del borde */
+}
+
+.contacto-contenedor:hover {
+    border-color: #673AB7; /* Cambia el color del borde al pasar el ratón sobre el contenedor */
+}
+
+.pag-contenedor {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 20px;
+    transition: border-color 0.3s; /* Agrega transición para suavizar el cambio de color del borde */
+}
+
+.pag-contenedor:hover {
+    border-color: #673AB7; /* Cambia el color del borde al pasar el ratón sobre el contenedor */
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+
+
+
+

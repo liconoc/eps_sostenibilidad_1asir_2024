@@ -1,0 +1,562 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+    .centrado {
+      margin-left: 30px; /* Elimina el margen predeterminado del cuerpo del documento */
+      margin-right: 30px; /* Esto establece un margen de 20 píxeles en todos los lados del párrafo */
+      margin-top: 5px; /* Margen de 10 píxeles en la parte superior */
+      margin-bottom: 5px; /* Margen de 10 píxeles en la parte inferior */
+      align-items: "center;";
+        }
+
+        header {
+            background-color: #FFD659;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+             margin-right: 5px; /* Ajusta la separación entre elementos */
+             font-size: 20px;
+             font-family: Arial, sans-serif;
+        }
+        nav ul li:last-child {
+            margin-right: 0; /* Elimina el margen derecho del último elemento */
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 20px;
+        }
+        a {
+            color: black;
+            }
+        nav ul li a:hover {
+            background-color: #555;
+
+        }
+        .logo img {
+            height: 130px; /* Ajusta la altura del logo según sea necesario */
+            width: auto;
+            margin-left: 10%; /* Ajusta este valor según sea necesario */
+            margin-right: auto; /* Ajusta este valor según sea necesario */
+        }
+
+      .logo {
+    font-family: Copperplate Gothic Light, sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: transform 0.3s; /* Agrega una transición de transformación */
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Aplica un efecto de sobresalir al hacer hover */
+}
+
+ 
+nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    nav ul li:hover {
+        background-color: #f0f0f0;
+    }
+
+    
+
+/* Estilo personalizado para el carrusel */
+    .carousel-inner img {
+      width: 100%; /* Ajustar el ancho de la imagen al 100% */
+      height: 600px; /* Altura fija para todas las imágenes */
+      object-fit: cover; /* Cubrir completamente el contenedor */
+    }
+
+
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.background-image {
+    background-image: url('img/gif1.gif'); /* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0; /* Elimina el margen superior predeterminado de los títulos */
+}
+
+p {
+    margin-bottom: 0; /* Elimina el margen inferior predeterminado de los párrafos */
+}
+
+
+
+/* Estilos CSS para el diseño */
+        .color {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio alrededor de los elementos */
+    align-items: center;
+}
+
+.container3 {
+    text-align: center;
+    flex: 1; /* Para que cada contenedor ocupe el mismo espacio horizontalmente */
+}
+
+.container3 img {
+    width: auto;
+    height: auto;
+    max-width: 70%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 70%; /* Ajusta el tamaño máximo de la imagen */
+    border-radius: 50%;
+}
+
+
+.imagenes {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+.footer1 {
+       background-color: white;
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        .imagenes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .imagen {
+            text-align: center;
+            flex: 1 0 200px;
+            max-width: 300px;
+        }
+
+        .imagen img {
+            max-width: 40%;
+            height: auto;
+            transition: transform 0.3s; /* Agrega una transición de transformación */
+}
+
+.imagen img:hover {
+    transform: scale(1.3); /* Aplica un efecto de sobresalir al hacer hover */
+}
+        
+       .imagen h3 {
+            margin-top: 10px;
+            color: #555;
+            font-size: 18px;
+        }
+        p {
+            color: #777;
+        }
+
+
+.container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+}
+.titulo {
+    color: #E5554F;
+    font-family: Arial Black, sans-serif;
+    animation: fadeIn 2s ease forwards, bounce 2s infinite alternate;
+        opacity: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+.titulo1 h1 {
+    color: #333;
+}
+
+.quiz-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 30px;
+  }
+  #quiz-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: colorChange 1s infinite alternate;
+  }
+  @keyframes colorChange {
+    from { background-color: #00A254; }
+    to { background-color: #00BF63; }
+  }
+  p {
+      font-size: 20px;
+  }
+
+   h1, h2 {
+    text-align: center;
+    font-family: Broadway, sans-serif;
+
+  }
+  #question {
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .option {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  .selected {
+    background-color: #d6e6ff;
+  }
+  #score {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  #reset {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  button {
+  background-color: #4CAF50; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: white; /* Color de texto */
+  padding: 15px 32px; /* Espaciado dentro del botón */
+  text-align: center; /* Alineación del texto */
+  text-decoration: none; /* Sin decoración de texto */
+  display: inline-block; /* Display en línea */
+  font-size: 16px; /* Tamaño de fuente */
+  margin: 4px 2px; /* Margen exterior */
+  cursor: pointer; /* Cursor de puntero */
+  border-radius: 8px; /* Radio de borde */
+  transition-duration: 0.4s; /* Duración de transición */
+}
+
+button:hover {
+  background-color: #45a049; /* Cambio de color de fondo en hover */
+  color: white; /* Cambio de color de texto en hover */
+}
+
+
+  .container5 {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
+
+  .image {
+    max-width: 50%;
+     border-radius: 70%; /* Añade borde redondo */
+
+     
+  }
+  .text-box {
+    max-width: auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0 auto; /* Centra horizontalmente */
+    background-color: white; /* Añade fondo de color */
+
+  }
+  
+  .footer2 {
+    background: linear-gradient(to right, #FFD659, #ffffff, #FFD659);
+    height: auto; /* Aquí estableces la altura deseada en píxeles */
+     text-align: center; /* Para centrar el texto verticalmente */
+    
+    }
+
+
+
+
+/* Estilos para el footer */
+footer {
+  background-color: #3F4444;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 20px; /* Puedes ajustar este valor según sea necesario */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content div {
+  flex: 1;
+  margin-right: 10px;
+
+
+}
+
+.about-us,
+.contact-info,
+.social-media,
+.advertising {
+  text-align: left;
+}
+
+.about-us h3,
+.contact-info h3,
+.social-media h3,
+.advertising h3 {
+  color: #fff;
+  font-size: 28px; /* Tamaño de fuente aumentado a 24px */
+  margin-bottom: 5px; /* Agrega margen inferior de 10px */
+}
+
+.about-us p,
+.contact-info p {
+  color: #ccc;
+  font-size: 15px; /* Tamaño de fuente aumentado a 18px */
+  margin-bottom: 15px; /* Agrega margen inferior de 10px */
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media ul li {
+  margin-bottom: 5px;
+}
+
+.social-media ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px; /* Tamaño de fuente aumentado a 16px */
+}
+
+.social-media ul li a:hover {
+  color: #fff;
+}
+.social-media img {
+  max-width: 18%; /* Máximo ancho de la imagen */
+  max-height: 10%; /* Máxima altura de la imagen */
+}
+.footer-bottom {
+  margin-top: 20px;
+}
+
+
+
+.cookie-consent {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    max-width: auto;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.cookie-consent-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-consent p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.accept-cookies-btn, .reject-cookies-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.accept-cookies-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reject-cookies-btn {
+    background-color: #ff5733;
+    color: white;
+}
+
+.accept-cookies-btn:hover, .reject-cookies-btn:hover {
+    opacity: 0.8;
+}
+
+
+
+
+#chat-widget {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#chat-header {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+#chat-header img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#chat-header #robot-name {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#chat-body {
+  padding: 10px;
+}
+
+#chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#user-input {
+  width: calc(100% - 70px);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#send-btn {
+  width: 60px;
+  padding: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.question {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.answer {
+  color: #28a745;
+  font-style: italic;
+  margin-left: 10px;
+}
+
+
+
+
+

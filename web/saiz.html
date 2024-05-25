@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="saiz.css">
+    <title>Objetivos de Desarrollo Sostenible</title>
+</head>
+<body>
+    <body class="centrado"> 
+<header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de tu sitio web">
+            <h1>EcoConsciencia</h1>
+        </div>
+<nav>
+    <ul>
+        <li><a href="index.html"><b>🌿 InIcIo 🌿</b></a>
+        </li>
+    </ul>
+</nav>
+    </header>
+    <hr></hr>
+    <header class="header1">
+        <img src="img/objetivos.png" alt="Objetivos de Desarrollo Sostenible" width="1000">
+    </header>
+<div class="titulo"><h1>" Comencemos divirtiéndonos - recolecta residuos "</h1>
+<h3> ⬅️ Muevete ➡️ </h3>
+</div>
+<div class="juego">
+ <div id="gameContainer">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <button id="resetButton">Reset</button>
+    </div></div>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+const SCREEN_WIDTH = canvas.width;
+const SCREEN_HEIGHT = canvas.height;
+
+// Cargar imágenes
+const playerImg = new Image();
+playerImg.src = "img/heroe.png"; // Cambiar "player.png" por la ruta de tu imagen de jugador
+
+const elementImgs = []; // Array para almacenar las imágenes de los elementos
+elementImgs.push(new Image());
+elementImgs[0].src = "img/bolsa1.png"; // Cambiar "element1.png" por la ruta de tu imagen de elemento 1
+elementImgs.push(new Image());
+elementImgs[1].src = "img/botella1.png"; // Cambiar "element2.png" por la ruta de tu imagen de elemento 2
+elementImgs.push(new Image());
+elementImgs[2].src = "img/lata.png";
+elementImgs.push(new Image());
+elementImgs[3].src = "img/off.png";
+elementImgs.push(new Image());
+elementImgs[4].src = "img/aerosol.png";
+
+const playerWidth = 50;
+const playerHeight = 50;
+let playerX = (SCREEN_WIDTH - playerWidth) / 2;
+const playerY = SCREEN_HEIGHT - playerHeight - 10;
+
+const elementSize = 40; // Tamaño deseado para los elementos
+
+const elements = [];
+const ELEMENT_COUNT = 20;
+
+let score = 0;
+
+// Player
+function drawPlayer() {
+    ctx.drawImage(playerImg, playerX, playerY, playerWidth, playerHeight);
+}
+
+// Elements
+class Element {
+    constructor() {
+        this.x = Math.random() * (SCREEN_WIDTH - elementSize);
+        this.y = Math.random() * -100;
+        this.speedY = Math.random() * 5 + 1;
+        this.imgIndex = Math.floor(Math.random() * elementImgs.length); // Índice aleatorio para seleccionar una imagen de elemento
+    }
+
+    draw() {
+        ctx.drawImage(elementImgs[this.imgIndex], this.x, this.y, elementSize, elementSize);
+    }
+
+    update() {
+        this.y += this.speedY;
+        if (this.y > SCREEN_HEIGHT) {
+            this.x = Math.random() * (SCREEN_WIDTH - elementSize);
+            this.y = Math.random() * -100;
+            this.speedY = Math.random() * 5 + 1;
+            this.imgIndex = Math.floor(Math.random() * elementImgs.length); // Cambiar la imagen cuando el elemento se reinicia
+        }
+    }
+}
+
+for (let i = 0; i < ELEMENT_COUNT; i++) {
+    elements.push(new Element());
+}
+
+// Game loop
+function gameLoop() {
+    // Clear canvas
+    ctx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
+    // Draw player
+    drawPlayer();
+
+    // Draw and update elements
+    elements.forEach(element => {
+        element.draw();
+        element.update();
+    });
+
+    // Check for collisions
+    elements.forEach((element, index) => {
+        if (element.y + elementSize >= playerY && element.y <= playerY + playerHeight &&
+            element.x + elementSize >= playerX && element.x <= playerX + playerWidth) {
+            elements.splice(index, 1);
+            score++;
+        }
+    });
+
+    // Display score
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.fillText("Score: " + score, 10, 30);
+
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+
+// Player movement
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft") {
+        playerX -= 5;
+        if (playerX < 0) playerX = 0;
+    } else if (event.key === "ArrowRight") {
+        playerX += 5;
+        if (playerX + playerWidth > SCREEN_WIDTH) playerX = SCREEN_WIDTH - playerWidth;
+    }
+});
+
+// Reset button
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", function() {
+    elements.length = 0;
+    for (let i = 0; i < ELEMENT_COUNT; i++) {
+        elements.push(new Element());
+    }
+    score = 0;
+});
+ </script>
+
+    <div class="titulo"><h1>🎮 Elige tu tema favorito y empieza a JUGAR 🕹️</h1></div>
+    <main>
+        <!-- ODS 1: Fin de la pobreza -->
+        <div class="goal" id="goal1"> 
+            <img src="img/img1.jpg" alt="ODS 1"> 
+        </div>
+
+        <!-- ODS 2: Hambre cero -->
+        <div class="goal" id="goal2">
+            <img src="img/img2.jpg" alt="ODS 2">
+        </div>
+
+        <!-- ODS 3: Salud y bienestar -->
+        <div class="goal" id="goal3">
+            <img src="img/img3.jpg" alt="ODS 3"><br>
+            <button><a href="salud.html"><b>Jugar</b></a></button>
+        </div>
+
+        <!-- ODS 4: Educación de calidad -->
+        <div class="goal" id="goal4">
+            <img src="img/img4.jpg" alt="ODS 4">
+        </div>
+
+        <!-- ODS 5: Igualdad de género -->
+        <div class="goal" id="goal5">
+            <img src="img/img5.jpg" alt="ODS 5"> 
+        </div>
+
+        <!-- ODS 6: Agua limpia y saneamiento -->
+        <div class="goal" id="goal6">
+            <img src="img/img6.jpg" alt="ODS 6"> 
+        </div>
+
+        <!-- ODS 7: Fin de la pobreza -->
+        <div class="goal" id="goal1"> 
+            <img src="img/img7.jpg" alt="ODS 7"> 
+        </div>
+
+        <!-- ODS 8: Hambre cero -->
+        <div class="goal" id="goal2">
+            <img src="img/img8.jpg" alt="ODS 8"> 
+        </div>
+
+        <!-- ODS 9: Salud y bienestar -->
+        <div class="goal" id="goal3">
+            <img src="img/img9.jpg" alt="ODS 9"> 
+        </div>
+
+        <!-- ODS 10: Educación de calidad -->
+        <div class="goal" id="goal4">
+            <img src="img/img10.jpg" alt="ODS 10">     
+        </div>
+
+        <!-- ODS 11: Igualdad de género -->
+        <div class="goal" id="goal5">
+            <img src="img/img11.jpg" alt="ODS 11"><br>
+            <button><a href="ciudadsostenible.html"><b>Jugar</b></a></button>
+        </div>
+
+        <!-- ODS 12: Agua limpia y saneamiento -->
+        <div class="goal" id="goal6">
+            <img src="img/img12.jpg" alt="ODS 12">
+        </div>
+
+        <!-- ODS 13: Fin de la pobreza -->
+        <div class="goal" id="goal1"> 
+            <img src="img/img13.jpg" alt="ODS 13"><br>
+            <button><a href="reciclaje.html"><b>Jugar</b></a></button> 
+        </div>
+
+        <!-- ODS 14: Hambre cero -->
+        <div class="goal" id="goal2">
+            <img src="img/img14.jpg" alt="ODS 14"><br>
+            <button><a href="vidamarina.html"><b>Jugar</b></a></button>
+        </div>
+
+        <!-- ODS 15: Salud y bienestar -->
+        <div class="goal" id="goal3">
+            <img src="img/img15.jpg" alt="ODS 15">
+        </div>
+
+        <!-- ODS 16: Educación de calidad -->
+        <div class="goal" id="goal4">
+            <img src="img/img16.jpg" alt="ODS 16">
+        </div>
+
+        <!-- ODS 17: Igualdad de género -->
+        <div class="goal" id="goal5">
+            <img src="img/img17.jpg" alt="ODS 17"> 
+        </div>
+
+    </main>
+
+<br>
+
+    <footer>
+        <p>&copy; 2024 Objetivos de Desarrollo Sostenible</p>
+    </footer>
+</body>
+</html>

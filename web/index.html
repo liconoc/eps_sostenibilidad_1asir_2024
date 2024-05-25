@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <title>Mi Página</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="centrado"> 
+<header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de tu sitio web">
+            <h1>EcoConsciencia</h1>
+        </div>
+<nav>
+    <ul>
+       
+      <button><a href="login.html"><b>Registrate🌿</b></a></button>
+       
+      <button><a href="saiz.html"><b>Juegos🌿</b></a></button>
+         
+      <button><a href="login.html"><b>Login🌿</b></a></button>
+      
+       
+    </ul>
+</nav>
+    </header>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/foto7.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/foto8.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/foto9.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+<!-- Agrega la biblioteca de Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<hr></hr>
+
+<div class="container">
+        <div class="background-image">
+            <div class="section">
+                <h2>Aprendizaje</h2>
+                <p>"El aprendizaje es la llave que abre todas las puertas del conocimiento y el crecimiento personal. ¡Nunca dejes de aprender!"</p>
+            </div>
+            <div class="section">
+                <h2>Ambiental</h2>
+                <p>"El cuidado ambiental es responsabilidad de todos. ¡Protejamos nuestro hogar, la Tierra!"</p>
+            </div>
+            <div class="section">
+                <h2>Activos</h2>
+                <p>"Involúcrate activamente en la protección de nuestro entorno. ¡Cada acción cuenta!"</p>
+            </div>
+            <div class="section">
+                <h2>Hàbitos</h2>
+                <p>"Crea hábitos sostenibles para un futuro mejor. ¡Pequeños cambios, grandes impactos!"</p>
+            </div>
+        </div>
+    </div>
+
+    <hr></hr>
+<br><br><br><br>
+<footer class="footer2">
+   <div class="container4">
+    <h2 class="titulo">"Antes de seguir adelante, démosle una oportunidad a tu conocimiento para brillar."</h2>
+        <h1 class="titulo1">EcoConsciencia - Juegos</h1>
+        <div id="gameArea">
+            <p>¡Bienvenido a EcoConsciencia! Demuéstrame de que estas hecho.</p>
+            <button id="startButton">Comenzar Juego</button>
+        </div>
+        <!-- Aquí puedes incluir tu formulario de preguntas -->
+        <div id="questionnaire" style="display: none;">
+            <div id="quiz-container">
+  <h1>Demuestra Tu Conocimiento</h1>
+  <h3> Responde las 15 preguntas:</h3>
+  <div id="question"></div>
+  <div id="options"></div>
+  <div id="score">Score: 0</div>
+  <div id="reset">
+    <button onclick="resetQuiz()">Reset</button>
+  </div>
+</div>
+            <form id="questionsForm">
+                <!-- Tus preguntas y campos de entrada van aquí -->
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const startButton = document.getElementById('startButton');
+    const gameArea = document.getElementById('gameArea');
+    const questionnaire = document.getElementById('questionnaire');
+
+    startButton.addEventListener('click', startGame);
+
+    function startGame() {
+        clearGameArea();
+        displayQuestionnaire();
+    }
+
+    function clearGameArea() {
+        gameArea.innerHTML = '';
+    }
+
+    function displayQuestionnaire() {
+        questionnaire.style.display = 'block';
+    }
+});
+
+        const questions = [
+    {
+      question: "¿Cuál de los siguientes es una fuente importante de contaminación del aire?",
+      options: ["Deforestación", " Emisiones industriales", " Escorrentía agrícola"],
+      answer: 1
+    },
+    {
+      question: "¿Cuál es el principal gas de efecto invernadero responsable del calentamiento global?",
+      options: [" Monóxido de carbono", "Metano", "Óxido nitroso"],
+      answer: 1
+    },
+    {
+      question: "¿Qué actividad contribuye más a la contaminación del agua?",
+      options: ["Vertidos de petróleo", "Residuos domésticos", "Descargas industriales"],
+      answer: 2
+    },
+    {
+      question: "¿Cuál de los siguientes es una forma común de contaminación del suelo?",
+      options: ["Erosión del suelo", "Expansión urbana", " Residuos plásticos"],
+      answer: 2
+    },
+    {
+      question: "¿Cuál es la principal causa de contaminación del aire en muchos países en desarrollo?",
+      options: ["Cocinar con combustibles de biomasa", "Fumar", "Emisiones vehiculares"],
+      answer: 0
+    },
+    {
+      question: "¿Qué contaminante es principalmente responsable de la lluvia ácida?",
+      options: ["Dióxido de azufre", " Dióxido de carbono", "Óxido de nitrógeno"],
+      answer: 0
+    },
+    {
+      question: "¿Qué sector es el mayor contribuyente a las emisiones de dióxido de carbono a nivel mundial?",
+      options: [" Transporte", "Agricultura", "Producción de energía"],
+      answer: 2
+    },
+    {
+      question: "¿Cuál es una fuente importante de contaminación plástica en los océanos?",
+      options: ["Redes de pesca", " Microperlas en productos de cuidado personal", "Escorrentía agrícola"],
+      answer: 1
+    },
+    {
+      question: "¿Cuál es la principal causa de contaminación acústica en áreas urbanas?",
+      options: ["Maquinaria industrial", "Congestión del tráfico", "Actividades de construcción"],
+      answer: 1
+    },
+    {
+      question: "¿Qué contaminante está asociado con el agotamiento de la capa de ozono?",
+      options: ["Clorofluorocarbonos (CFC)", "Monóxido de carbono", "Material particulado"],
+      answer: 0
+    },
+    {
+      question: "¿Cuál es la principal fuente de contaminación por mercurio en cuerpos de agua?",
+      options: [" Residuos industriales", "Plantas de energía de carbón", "Escorrentía agrícola"],
+      answer: 1
+    },
+    {
+      question: "¿Qué contribuye más a la contaminación lumínica en áreas urbanas?",
+      options: ["Farolas", "Carteles publicitarios", "Iluminación residencial"],
+      answer: 2
+    },
+    {
+      question: "¿Cuál es una fuente significativa de contaminación del aire en interiores en países desarrollados?",
+      options: ["Gas radón", "Quemas al aire libre", " Pesticidas"],
+      answer: 0
+    },
+    {
+      question: "¿Cuál es una consecuencia común de la contaminación del suelo?",
+      options: ["Desertificación", "Disminución de la productividad agrícola", "Pérdida de biodiversidad"],
+      answer: 1
+    },
+    {
+      question: "¿Cuál es una fuente importante de contaminación acústica en hábitats naturales?",
+      options: ["Actividades humanas", "Desastres naturales", "Llamadas de apareamiento de la vida silvestre"],
+      answer: 0
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  const questionElement = document.getElementById('question');
+  const optionsElement = document.getElementById('options');
+  const scoreElement = document.getElementById('score');
+
+  function loadQuestion() {
+    questionElement.textContent = questions[currentQuestion].question;
+    optionsElement.innerHTML = '';
+    for (let i = 0; i < questions[currentQuestion].options.length; i++) {
+      const option = document.createElement('div');
+      option.classList.add('option');
+      option.textContent = questions[currentQuestion].options[i];
+      option.addEventListener('click', () => checkAnswer(i));
+      optionsElement.appendChild(option);
+    }
+  }
+
+  function checkAnswer(optionIndex) {
+    if (optionIndex === questions[currentQuestion].answer) {
+      score++;
+    }
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      endGame();
+    }
+  }
+
+  function endGame() {
+    questionElement.textContent = "Quiz completed!";
+    optionsElement.innerHTML = '';
+    scoreElement.textContent = `Final Score: ${score}`;
+  }
+
+  function resetQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    loadQuestion();
+    scoreElement.textContent = 'Score: 0';
+  }
+
+  loadQuestion();
+    </script> 
+</footer>
+<br><br><br><br>
+<hr></hr>
+<br><br>
+<div class="container5">
+  <img src="img/inundacion3.png" alt="Imagen">
+  <div class="text-box">
+    <h1>La actividad humana puede agravar estos eventos de varias maneras:</h1>
+    <br><br><br>
+    <h2>Inundaciones:</h2>
+    <p><b>Deforestación:</b> La tala de árboles puede reducir la capacidad del suelo para absorber agua, lo que aumenta el riesgo de inundaciones.</p>
+    <p><b>Cambio climático:</b> La contaminación humana, particularmente a través de la emisión de gases de efecto invernadero, contribuye al cambio climático. Esto puede aumentar la intensidad y la frecuencia de eventos climáticos extremos, como fuertes lluvias, huracanes y tormentas, que pueden resultar en inundaciones.</p>
+    <p><b>Deterioro de infraestructuras de agua:</b> La contaminación de los ríos y arroyos por desechos humanos, químicos industriales y vertidos de aguas residuales puede obstruir cauces y sistemas de drenaje, aumentando el riesgo de inundaciones.</p>
+    <p><b>En resumen, mientras que las inundaciones pueden tener causas naturales, la actividad humana puede desempeñar un papel significativo en su frecuencia e intensidad, a través de la contaminación y otros impactos en el medio ambiente.</p></b>
+  </div>
+</div>
+<hr></hr>
+<div class="container5">
+  <img src="img/incendio1.png" alt="Imagen">
+  <div class="text-box">
+    <h2>Incendios Forestales</h2>
+    <p><b>Actividades humanas negligentes:</b> El descuido humano, como dejar fogatas sin apagar correctamente, arrojar cigarrillos encendidos, quemar basura ilegalmente o realizar actividades que generen chispas, puede desencadenar incendios forestales.</p>
+    <p><b>Quema de desechos agrícolas:</b> La quema de desechos agrícolas o forestales, una práctica común en algunas áreas para despejar terrenos, puede salirse de control y provocar incendios forestales.</p>
+    <p><b>Quema de residuos de construcción y demolición:</b> La quema de residuos de construcción y demolición en áreas cercanas a bosques o áreas naturales puede provocar incendios forestales.</p>
+    <p><b>Cambio climático:</b> Aunque no es una causa directa de incendios forestales, el cambio climático puede aumentar la frecuencia e intensidad de las sequías y las olas de calor, creando condiciones más propicias para la propagación de incendios forestales.</p>
+    <p><b>En resumen, si bien los incendios forestales también pueden ocurrir naturalmente debido a factores como rayos, la actividad humana y la contaminación desempeñan un papel significativo en la ocurrencia y magnitud de muchos incendios forestales en todo el mundo.</b></p>
+  </div>
+</div>
+<hr></hr>
+<div class="container5">
+  <img src="img/sequia.png" alt="Imagen">
+  <div class="text-box">
+    <h2>Sequias</h2>
+    <p><b>Cambio climático:</b> La contaminación humana, especialmente a través de la emisión de gases de efecto invernadero, contribuye al cambio climático. Este cambio puede alterar los patrones de precipitación y aumentar la frecuencia e intensidad de las sequías en algunas regiones.</p>
+    <p><b>Deforestación:</b> La tala de árboles puede reducir la humedad en el suelo y afectar los patrones de circulación atmosférica, lo que puede contribuir a la sequía en ciertas áreas.</p>
+    <p><b>Uso excesivo de agua:</b> La extracción excesiva de agua de ríos, lagos y acuíferos para uso humano, agrícola e industrial puede reducir los suministros de agua disponibles, lo que puede agravar las sequías.</p>
+    <p><b>Contaminación del agua:</b> La contaminación de fuentes de agua superficial y subterránea por actividades humanas, como la descarga de productos químicos industriales y residuos agrícolas, puede afectar la calidad y disponibilidad del agua, lo que puede contribuir a la sequía en algunas áreas.</p>
+    <p><b>En resumen, aunque las sequías tienen causas naturales, la actividad humana y la contaminación pueden desempeñar un papel significativo en su agravamiento y prolongación en algunas regiones. Reducir las emisiones de gases de efecto invernadero, promover prácticas sostenibles de gestión del agua y conservación del medio ambiente son algunas de las medidas que pueden ayudar a mitigar los efectos de las sequías inducidas por la actividad humana.</b></p>
+  </div>
+</div>
+<hr></hr>
+<div class="container5">
+  <img src="img/tormenta.png" alt="Imagen">
+  <div class="text-box">
+    <h2>Tormentas</h2>
+    <p><b>Cambio climático:</b> La actividad humana, particularmente la emisión de gases de efecto invernadero, contribuye al cambio climático, lo que puede afectar los patrones climáticos globales y regionales. Esto puede conducir a cambios en la intensidad y frecuencia de las tormentas, como huracanes, ciclones y tormentas eléctricas.</p>
+    <p><b>Contaminación del aire:</b> La contaminación del aire por emisiones industriales y vehiculares puede afectar la composición química de la atmósfera, lo que a su vez puede influir en la formación y desarrollo de tormentas. Por ejemplo, la contaminación del aire puede afectar la formación de nubes y la distribución de la precipitación.</p>
+    <p><b>Modificación del paisaje:</b> La modificación del paisaje, como la deforestación y la urbanización, puede alterar los patrones de circulación atmosférica y la distribución de la humedad, lo que puede tener un impacto en la formación y la intensidad de las tormentas.</p>
+    <p><b>En resumen, si bien la actividad humana y la contaminación pueden interactuar con los procesos meteorológicos naturales y afectar ciertos aspectos de las tormentas, no son la causa directa de su formación. Sin embargo, es importante reconocer y abordar los impactos humanos en el clima y el medio ambiente para mitigar los riesgos asociados con eventos meteorológicos extremos.</b></p>
+  </div>
+</div>
+
+<br><br>
+<hr></hr>
+<br><br>
+<header class="color">
+    <div class="container3">
+        <img src="img/aire2.png" alt="Imagen 1">
+        <h3>Contaminación del Aire:</h3>
+        <p>- Según la Organización Mundial de la Salud (OMS), la contaminación del aire es responsable de alrededor de 7 millones de muertes prematuras cada año en todo el mundo.</p>
+        <p>- En 2019, la contaminación atmosférica estuvo vinculada a aproximadamente 4.2 millones de muertes prematuras, principalmente debido a enfermedades cardíacas, accidentes cerebrovasculares, enfermedades pulmonares y cáncer de pulmón.</p>
+        <p>- Se estima que alrededor del 90% de la población mundial respira aire contaminado, según la OMS.</p>
+    </div>
+    <div class="container3">
+        <img src="img/agua3.png" alt="Imagen 2">
+        <h3>Contaminación del Agua:</h3>
+        <p>- La contaminación del agua afecta a más del 40% de la población mundial y aproximadamente el 80% de las aguas residuales se vierten en el medio ambiente sin tratamiento adecuado.</p>
+        <p>- Cada año, alrededor de 1.8 millones de personas mueren a causa de enfermedades transmitidas por el agua, como la diarrea, según la OMS.</p>
+        <p>- La contaminación química y la acumulación de plásticos en los océanos están teniendo un impacto devastador en la vida marina, con millones de animales marinos afectados y ecosistemas enteros en peligro.</p>
+    </div>
+    <div class="container3">
+        <img src="img/plasticos1.png" alt="Imagen 3">
+        <h3>Residuos plásticos:</h3>
+        <p>- Se estima que cada año se producen alrededor de 300 millones de toneladas de plástico en todo el mundo, y solo una fracción de este se recicla de manera efectiva.</p>
+        <p>- Más de 8 millones de toneladas de plástico se vierten en los océanos cada año, lo que equivale a un camión de basura lleno de plástico cada minuto.</p>
+        <p>- Se estima que para 2050, habrá más plásticos que peces en los océanos si no se toman medidas urgentes para abordar el problema.</p>
+    </div>
+</header>
+<br><br>
+<hr></hr>
+<br><br>
+<footer class="footer1">
+    <div class="imagenes">
+        <div class="imagen">
+            <img src="img/img2.png" alt="Imagen 1">
+            <h3>Recursos y Residuos</h3>
+            <p>Fomentemos un uso equitativo de los recursos</p>
+        </div>
+
+        <div class="imagen">
+            <img src="img/img3.png" alt="Imagen 2">
+            <h3>Justicia Climatica</h3>
+            <p>Defendemos la energia comunitaria</p>
+        </div>
+
+        <div class="imagen">
+            <img src="img/img4.png" alt="Imagen 3">
+            <h3>Soberania Alimentaria</h3>
+            <p>Promovemos una alimentacion sana y justa</p>
+        </div>
+
+        <div class="imagen">
+            <img src="img/img5.png" alt="Imagen 4">
+            <h3>Biodiversidad y Territorio</h3>
+            <p>Frenamos y revertimos la destruccion de la naturaleza</p>
+        </div>
+
+        <div class="imagen">
+            <img src="img/img6.png" alt="Imagen 5">
+            <h3>Cooperaciòn</h3>
+            <p>Trabajamos con la comunidad locales</p>
+        </div>
+    </div>
+
+</footer>
+<br><br>
+<hr></hr>
+<br><br>
+
+<footer>
+    <div class="footer-content">
+      <div class="about-us">
+        <h3>Quiénes Somos</h3>
+        <p>"Somos un equipo comprometido con el cambio ambiental. Nuestra misión es concienciar y educar sobre la contaminación para promover un futuro más limpio y sostenible para las generaciones venideras."</p>
+      </div>
+      <div class="contact-info">
+        <h3>Información de Contacto</h3>
+        <p><strong>Dirección:</strong> Calle Principal, 123</p>
+        <p><strong>Teléfono:</strong> 555-1234-5678</p>
+        <p><strong>Email:</strong> info@videoclub.com</p>
+      </div>
+      <div class="social-media">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#"><img src="img/face.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="img/twitter.png" alt="Twitter"></a></li>
+          <li><a href="#"><img src="img/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="img/in.png" alt="LinkedIn"></a></li>
+        </ul>
+      </div>
+      <div class="advertising">
+        <h3>Publicidad</h3>
+        <p>¡Únete a nosotros para crear un mundo más limpio y saludable! "Juntos Podemos"</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Página de Objetivos Sostenibles</p>
+    </div>
+  </footer>
+
+  <div id="cookieConsent" class="cookie-consent">
+    <div class="cookie-consent-content">
+        <p>Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.</p>
+        <div>
+            <button id="acceptCookiesBtn" class="accept-cookies-btn">Acepto</button>
+            <button id="rejectCookiesBtn" class="reject-cookies-btn">No, gracias!</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var cookieConsent = document.getElementById('cookieConsent');
+    var acceptCookiesBtn = document.getElementById('acceptCookiesBtn');
+    var rejectCookiesBtn = document.getElementById('rejectCookiesBtn');
+
+    if (!getCookie('cookieAccepted')) {
+        cookieConsent.style.display = 'block';
+    }
+
+    acceptCookiesBtn.addEventListener('click', function() {
+        setCookie('cookieAccepted', true, 365);
+        cookieConsent.style.display = 'none';
+    });
+
+    rejectCookiesBtn.addEventListener('click', function() {
+        cookieConsent.style.display = 'none';
+    });
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            while (cookie.charAt(0) == ' ') {
+                cookie = cookie.substring(1, cookie.length);
+            }
+            if (cookie.indexOf(nameEQ) == 0) {
+                return cookie.substring(nameEQ.length, cookie.length);
+            }
+        }
+        return null;
+    }
+});
+</script>
+
+<div id="chat-widget">
+  <div id="chat-header">
+    <img src="img/robot.png" alt="Robot Logo">
+    <span id="robot-name">ChatBot</span>
+    <button id="close-btn">&times;</button>
+  </div>
+  <div id="chat-body">
+    <div id="chat-messages"></div>
+    <input type="text" id="user-input" placeholder="Type a message...">
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+  const chatWidget = document.getElementById('chat-widget');
+  const closeBtn = document.getElementById('close-btn');
+  const sendBtn = document.getElementById('send-btn');
+  const userInput = document.getElementById('user-input');
+  const chatMessages = document.getElementById('chat-messages');
+
+  closeBtn.addEventListener('click', function() {
+    chatWidget.style.display = 'none';
+  });
+
+  sendBtn.addEventListener('click', function() {
+    const message = userInput.value.trim();
+    if (message !== '') {
+      sendMessage(message, true); // Envía la pregunta del usuario
+      userInput.value = '';
+      autoReply(); // Respuesta automática
+    }
+  });
+
+  function sendMessage(message, isQuestion) {
+    const messageDiv = document.createElement('div');
+    messageDiv.textContent = message;
+    messageDiv.classList.add('chat-message');
+    if (isQuestion) {
+      messageDiv.classList.add('question');
+    } else {
+      messageDiv.classList.add('answer');
+    }
+    chatMessages.appendChild(messageDiv);
+  }
+
+  function autoReply() {
+    const replies = [
+      "Gracias por tu pregunta. Estoy aquí para ayudarte.",
+      "Estoy procesando tu solicitud. Por favor, espera un momento.",
+      "¿Hay algo más en lo que pueda ayudarte?",
+      "Hola, ¿cómo puedo ayudarte hoy?",
+      "Estoy bien, gracias por preguntar. ¿Y tú?",
+      "¿En qué puedo asistirte hoy?",
+      "¡Hola! ¿Qué tal estás?",
+      "¡Encantado de ayudarte! ¿En qué puedo colaborar?"
+    ];
+
+    const odsQuestions = [
+      "¿Te gustaría aprender más sobre cómo los ODS están transformando nuestro mundo?",
+      "¿Sabías que los ODS abordan una amplia gama de desafíos, desde la pobreza hasta el cambio climático?",
+      "¿Tienes alguna pregunta específica sobre algún ODS en particular?",
+      "¿Estás interesado en conocer cómo puedes contribuir a la consecución de los ODS en tu comunidad?",
+      "¿Te gustaría explorar cómo las empresas están integrando los ODS en sus estrategias de sostenibilidad?"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * replies.length);
+    const randomReply = replies[randomIndex];
+    sendMessage(randomReply, false); // Envía la respuesta automática
+
+    if (randomIndex % 2 === 0) {
+      // Envía una pregunta relacionada con los ODS en cada segunda respuesta automática
+      const odsIndex = Math.floor(Math.random() * odsQuestions.length);
+      const odsQuestion = odsQuestions[odsIndex];
+      sendMessage(odsQuestion, false); // Envía la pregunta relacionada con los ODS
+    }
+  }
+});
+
+    </script>
+
+</body> 
+</html> 
