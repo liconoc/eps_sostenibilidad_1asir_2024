@@ -19,5 +19,5 @@ Esta web ha sido desarrollada por los alumnos de 1º de ASIR de [Enseñanzas Pro
 
 ## Licencia
 
-Este proyecto está licenciado bajo la [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
